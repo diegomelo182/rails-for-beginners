@@ -24,6 +24,8 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+				<section data-background-image="img/ruby_rails.png"></section>
+
 				<section>
 					<h1>Rails for Beginners</h1>
 					<h3>Entenda os conceitos básicos do framework</h3>
@@ -36,16 +38,54 @@
 				</section>
 
 				<section>
-					<h1>O que é?</h1>
-					<p>
+					<h1 class="fragment">O que é?</h1>
+					<p class="fragment">
 						Rails é um framework baseado na linguagem Ruby, e é o mais difundido/utilizado por sua comunidade, chegando a ser confundido com a própria linguagem.
 					</p>
 				</section>
 
 				<section>
-						<h2>Estrutura das rotas</h2>
-						<pre><code class="ruby" data-trim contenteditable>
-						# retorna todos
+					<h1 class="fragment">Arquitetura</h1>
+					<p class="fragment">
+						O framework é baseado na arquitetura MVC (Model - View - Controller) que já é bastante difundida e utilizada por inúmeros frameworks já presentes no mercado.
+					</p>
+				</section>
+
+				<section>
+					<img src="img/mvc.png" alt="MVC">
+				</section>
+
+				<section>
+					<h1 class="fragment">Model</h1>
+					<p class="fragment">
+						Camada geralmente utilizada para provir e gerenciar as regras de negócio da aplicação.
+					</p>
+					<p class="fragment">
+						Ex: Camada responsável por retornar dados de uma tabela banco de dados
+					</p>
+				</section>
+
+				<section>
+					<h1 class="fragment">View</h1>
+					<p class="fragment">
+						Camada de apresentação responsável por mostrar os dados presentes do Model referenciado.
+					</p>
+					<p class="fragment">
+						Ex: Camada responsável por mostrar a listagem dos dados providos pelo Model ao usuário
+					</p>
+				</section>
+
+				<section>
+					<h1 class="fragment">Controller</h1>
+					<p class="fragment">
+
+					</p>
+				</section>
+
+				<section>
+						<h2 class="fragment">Estrutura das rotas</h2>
+						<pre class="fragment"><code class="ruby" data-trim contenteditable>
+	# retorna todos
 	get '/api/v1/model_name', to: 'controller_name#index'
 	# cria um novo item
 	post '/api/v1/model_name', to: 'controller_name#create'
