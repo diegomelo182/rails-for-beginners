@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Rails for beginners - Academia S2it</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Rails for Beginners</h1>
+					<h3>Entenda os conceitos básicos do framework</h3>
+				</section>
+
+				<section>
+					<img src="img/eu.jpg" alt="Diego Melo" width="300">
+					<h2>Diego Melo</h2>
+					<p>Full stack Developer - S2IT</p>
+				</section>
+
+				<section>
+					<h1>O que é?</h1>
+					<p>
+						Rails é um framework baseado na linguagem Ruby, e é o mais difundido/utilizado por sua comunidade, chegando a ser confundido com a própria linguagem.
+					</p>
+				</section>
+
+				<section>
+						<h2>Estrutura das rotas</h2>
+						<pre><code class="ruby" data-trim contenteditable>
+						# retorna todos
+	get '/api/v1/model_name', to: 'controller_name#index'
+	# cria um novo item
+	post '/api/v1/model_name', to: 'controller_name#create'
+	# retorna item específico
+	get '/api/v1/model_name/:id', to: 'controller_name#show'
+	# altera item específico
+	put '/api/v1/model_name/:id', to: 'controller_name#update'
+	# altera item específico
+	patch '/api/v1/model_name/:id', to: 'controller_name#update'
+	# remove item específico
+	remove '/api/v1/model_name/:id', to: 'controller_name#destroy'
+						</code></pre>
+					</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
